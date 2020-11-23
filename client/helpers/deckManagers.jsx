@@ -5,6 +5,7 @@ class Deck {
     this.refresh();
     this.shuffle();
   }
+
   draw() {
     if (this.count === 0) {
       return -1;
@@ -12,9 +13,11 @@ class Deck {
     this.count--;
     return this.stack.pop()
   }
+
   getCount() {
     return this.count;
   }
+
   refresh() {
     this.stack = [];
     let suits = ['♠', '♥', '♦', '♣'];
@@ -28,6 +31,7 @@ class Deck {
     }
     this.count = 52;
   }
+
   shuffle() {
     let remaining = this.count;
     while (remaining) {
